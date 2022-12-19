@@ -6,5 +6,11 @@ public class FootballCoach implements Coach{
     public String getDailyWorkout() {
         return "goal";
     }
+
+    @Override
+    public String getDailyFortune() {
+        // TODO Auto-generated method stub
+        return null;
+    }
     
 }
