@@ -23,10 +23,10 @@
 
     <!-- define the dependency -->
     <bean id="myFortuneService"
-        class="com.luv2code.springdemo.HappyFortuneService">
+        class="com.luv2code.springdemo.RandomFortuneService">
     </bean>
     <bean id="myCoach"
-           class="com.luv2code.springdemo.TrackCoach">
+           class="com.luv2code.springdemo.FootballCoach">
 
            <!-- set up constructor injection -->
            <constructor-arg ref="myFortuneService"/>
@@ -43,8 +43,13 @@
         <property name="emailAddress"  value="${foo.email}"></property>
         <property name="team" value="${foo.team}"></property>
     </bean>
-    
-</beans>
+
+    <bean id="myFootballCoach"
+        class="com.luv2code.springdemo.FootballCoach">
+        <constructor-arg ref="myFortuneService"/>
+    </bean>   
+      
+    </beans>
 
  
 
